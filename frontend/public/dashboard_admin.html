@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard SaaS</title>
+    <link rel="stylesheet" href="dashboard_styles_admin.css?v=1.1">
+</head>
+<body>
+
+<div class="layout">
+    <aside class="sidebar">
+        <h2 class="logo">SaaS Admin</h2>
+        <nav>
+            <a href="#" data-section="dashboard" class="active">Dashboard</a>
+            <a href="#" data-section="users">Usuarios</a>
+            <a href="#" data-section="plans">Planes</a>
+            <a href="#" data-section="subscriptions">Suscripciones</a>
+        </nav>
+    </aside>
+    <main class="main">
+
+        <a href="#" id="logoutBtn">Cerrar Sesión</a>
+        <section id="dashboard" class="section active-section">
+            <h1>Dashboard</h1>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Usuarios</h3>
+                    <p id="totalUsers">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Suscripciones Activas</h3>
+                    <p id="activeSubs">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Ingresos Mensuales</h3>
+                    <p id="revenue">$0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Planes Disponibles</h3>
+                    <p id="totalPlans">0</p>
+                </div>
+            </div>
+
+            <h2>Últimas Suscripciones</h2>
+            <table id="dashboardTable">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Plan</th>
+                        <th>Estado</th>
+                        <th>Fecha Inicio</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <section id="users" class="section">
+            <h1>Usuarios</h1>
+            <div class="section-header">
+                <input type="search" id="searchUser" placeholder="Buscar usuario por nombre o email...">
+            </div>
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Registro</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <section id="plans" class="section">
+            <h1>Planes</h1>
+            <div class="plans-grid" id="plansGrid">
+            </div>
+            <h2>Lista de Planes</h2>
+            <table id="plansTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Duración</th>
+                        <th>Características</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <section id="subscriptions" class="section">
+            <h1>Suscripciones</h1>
+
+            <table id="subsTable">
+                <thead>
+                 <tr>
+                      <th>Usuario ID</th>
+                        <th>Plan ID</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Estado</th>
+                 </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+</section>
+
+    </main>
+    <div id="editPlanModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Plan</h2>
+            <form id="editPlanForm">
+                <input type="hidden" id="planId">
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" id="planName" disabled>
+                </div>
+                <div class="form-group">
+                    <label>Precio ($):</label>
+                    <input type="number" id="planPrice" min="0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>Límite de Recursos:</label>
+                    <input type="number" id="planLimit" min="1" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn-save">Guardar Cambios</button>
+                    <button type="button" class="btn-cancel">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="dashboard_adminScript.js"></script>
+</body>
+</html>

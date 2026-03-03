@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Suscripciones</title>
+    <link rel="stylesheet" href="dashboard_user.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="topbar">
+        <div class="brand">
+            <h1>Suscripciones</h1>
+            <p class="subtitle">Gestiona tu suscripción y descubre planes</p>
+        </div>
+        <div class="user-actions">
+            <div id="userAvatar" class="avatar">U</div>
+            <a href="#" id="logoutBtn" class="btn danger">Cerrar Sesión</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="subscription-section" class="grid-two">
+            <div class="card profile-card">
+                <h2>Mi Perfil</h2>
+                <p id="userName">Cargando...</p>
+                <p id="userEmail" class="muted"></p>
+            </div>
+
+            <div id="subscription-info" class="card">
+                <h2>Mi Suscripción</h2>
+                <div class="subscription-content">
+                    <p>Cargando...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="plans-section">
+            <div class="section-header">
+                <div>
+                    <h2>Planes Disponibles</h2>
+                    <p class="muted">Elige el plan que mejor se adapte a ti</p>
+                </div>
+                <div class="controls">
+                    <input type="search" id="searchPlan" placeholder="Buscar plan...">
+                    <select id="sortPlan">
+                        <option value="default">Ordenar</option>
+                        <option value="price-asc">Precio ↑</option>
+                        <option value="price-desc">Precio ↓</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="plans-container" class="plans-grid">
+            </div>
+        </section>
+    </main>
+</div>
+
+<div id="confirmModal" class="modal hidden">
+    <div class="modal-content">
+        <h3 id="modalTitle">Confirmar suscripción</h3>
+        <p id="modalBody">¿Deseas suscribirte a este plan?</p>
+        <div class="modal-actions">
+            <button id="modalCancel" class="btn">Cancelar</button>
+            <button id="modalConfirm" class="btn primary">Confirmar</button>
+        </div>
+    </div>
+</div>
+
+<script src="dashboard_user.js"></script>
+</body>
+</html>
