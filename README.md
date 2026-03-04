@@ -1,31 +1,44 @@
-🚀 SaaS Subscription Management System
+# 🚀 SaaS-Ticket
 
-Sistema SaaS para gestión de usuarios, planes y suscripciones, desarrollado con arquitectura modular utilizando Node.js, Express y MongoDB.
+Sistema completo de gestión de membresías y facturación desarrollado con Node.js y MongoDB.
 
-📌 Descripción
+## 📸 Demo Visual
 
-Este proyecto permite:
--. Registro e inicio de sesión de usuarios
--. Creación y gestión de planes (Basic, Pro, Platinum)
--. Creación y cancelación de suscripciones
--. Dashboard administrativo con métricas
--. Cálculo automático de fechas de expiración
--. Encriptación segura de contraseñas
-El sistema sigue principios REST y separación de responsabilidades (MVC + Services + Middlewares).
+![SaaS Ticket](./assets/preview.png)
 
-🛠️ Tecnologías utilizadas
+## 🛠️ Tecnologías
 
--. Backend
--. Node.js
--. Express.js
--. MongoDB
--. Mongoose
--. bcrypt
--. date-fns
--. dotenv
--. cors
--. Frontend
--. HTML5
--. CSS3
--. JavaScript (Vanilla JS)
--. Fetch API
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- JWT
+- Bcrypt
+- React (Frontend)
+
+## 📦 Características
+
+- Registro y login con roles (Admin / Usuario)
+- Gestión de planes
+- Suscripciones con fecha de expiración automática
+- Dashboard administrativo
+- Cálculo de ingresos mensuales
+- Middleware de validación
+- Arquitectura en capas (MVC + Services)
+
+## 🧱 Arquitectura
+
+backend/
+controllers/
+models/
+routes/
+middlewares/
+services/
+
+## ⚙️ Instalación
+
+```bash
+git clone https://github.com/tuusuario/saas-ticket.git
+cd saas-ticket
+npm install
+npm run dev
