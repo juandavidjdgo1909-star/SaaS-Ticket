@@ -30,7 +30,7 @@ async function handleRegister(event) {
   const rol = roleSelect.value;
   const adminCode = adminCodeInput.value;
 
-  if (rol === "admin" && adminCode !== "Hijomiojuanda19") {
+  if (rol === "admin" && adminCode !== "codigoadmin123") {
     return showNotification("Código de administrador incorrecto.", true);
   }
 
