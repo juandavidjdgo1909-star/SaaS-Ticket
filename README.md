@@ -4,7 +4,7 @@ Sistema completo de gestión de membresías y facturación desarrollado con Node
 
 ## 📸 Demo Visual
 
-![SaaS Ticket](./assets/preview.png)
+![SaaS Ticket](./frontend/public/assets/logo.png)
 
 ## 🛠️ Tecnologías
 
